@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1b1b1b;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url();
+    background-size: cover;
+    border: .1px solid #1b1b1b;
+    border-radius: 50%;
+    box-shadow: 0px -10px 15px rgba(255, 255, 255, 0.02),
+                inset 0 -10px 15px rgba(255, 255, 255, 0.02),
+                0 10px 15px rgba(0, 0, 0, 0.08),
+                inset 0 15px 15px rgba(0, 0, 0, 0.08);
+}
+
+.clock:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #eeeeee;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .scn 
+{
+    position: absolute;
+}
+
+.clock .hour, .hr {
+    width: 160px;
+    height: 160px;
+}
+
+.clock .min, .mn {
+    width: 190px;
+    height: 190px;
+}
+
+.clock .scn, .sn {
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sn, {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #e84545;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #eeeeee;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sn:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #eeeeee;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
